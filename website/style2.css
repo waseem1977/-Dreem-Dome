@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 3400px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*Navbar Styling*/
+.navbar{
+    /*background: crimson;*/
+    position: fixed;
+    padding: 30px 0;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.4s ease;
+    z-index: 100;
+}
+
+.navbar.sticky{
+    background: crimson;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 35px ;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.4s ease;
+}
+
+.navbar.sticky .logo a span{
+    color: white;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+
+}
+
+.navbar .menu li a{
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    
+}
+
+.navbar .menu li a:hover{
+    color: crimson
+}
+
+.navbar.sticky .menu li a:hover{
+    color: white
+}
+
+.menu-button{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Body styling*/
+
+#home{
+    display: flex;
+    background: url("https://mail.google.com/mail/u/0?ui=2&ik=0c11c5aa52&attid=0.11&permmsgid=msg-f:1736446544661803609&th=181918eeaa057259&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_DnbWbT5Z6DsA1yh3jkPp33xBdnoyndyytUxSoUQCqMjvU0rK4OETdaV7TlGDrKkQrLUylMlyqOVSLTaWR76B2clJQZIUzf37_7eZMxixki7P0r6HUzyS-94I&disp=emb&realattid=181918e690fec2414ae9") no-repeat center;
+    padding: 10px;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 500px;
+}
+
+.home .max-width{
+    margin: auto 0px auto 5px;
+    display: flex;
+}
+
+.home .home-content{
+    flex: 1;
+    margin-top: 100px;
+}
+
+.home .home-content .text-1{
+    font-size: 17px;
+
+}
+
+.home .home-content .text-2{
+    font-size: 65px;
+    font-weight: 500;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 400;
+}
+
+.home .home-content p {
+    font-weight: 700;
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+   
+    background: linear-gradient(90deg, #000, crimson, #000, crimson);
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 5s linear infinite;
+    position: relative;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+/*
+.home .UI-text{
+    font-size: 25px;
+}
+
+p{
+    margin-top: 10px;
+}
+
+img{
+    padding: 10px 0px 10px 0px;
+}
+*/
+
+/*about section styling*/
+
+#about{
+    background-color: white;
+}
+
+.about .max-width .about-content{
+    padding: 30px 0;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(39, 40, 41);
+}
+/*Project section*/
+
+#project {
+    background-color: black;
+    padding: 20px 0;
+    min-height: 80vh;
+    align-items: center;
+    display: flex;
+  }
+  
+#project .project-title {
+    padding-bottom: 30px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+  }
+  
+#project .cards {
+    display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+  }
+  
+#project .cards .card{
+    display: block;
+    width: 100%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+  
+#project .card:hover{
+    transform: rotate3d(0, 1, .5, 1turn);
+      position: relative;
+      z-index: 10;
+  }
+  
+#project .cards .card img{
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+#project .cards .card figcaption{
+       position: absolute;
+      z-index: 2;
+      color: #fff;
+      font-size: 20px;
+      bottom: 0;
+      margin: 0 auto;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+      background-color: rgb(0,0,0,.8);
+  }
+
+  #connect {
+    background: url("https://mail.google.com/mail/u/0?ui=2&ik=0c11c5aa52&attid=0.8&permmsgid=msg-f:1736446544661803609&th=181918eeaa057259&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8D1riN4E5hqWpfiSym32fAwRS2394z5hb7K5Dvc6fpV0wEyswYlTGJzEM940kv12JnjdF7bzxRBe4i5ZZiAyM8VnHA_zVL9Z9KV9Bj2z_cHD2jhjME8e7WdgE&disp=emb&realattid=181918e690f726a98843") no-repeat center;
+    color: #fff;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    text-align: center;
+    transition: all .5s ease-in-out;
+  }
+  
+  #connect :hover{
+    transform: scale(1.4);
+  }
+  
+  #connect h2{
+   margin-bottom: 10px;
+  }
+  
+  
+  #connect .connect-container ul{
+      margin-right: 500px;
+      padding: 10px;
+      font-size: 30px;
+      list-style: none;
+      width: 100%;
+      transition: all .5s ease-in-out
+  }
+  
+  #connect .connect-container ul li{
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    transition: all .5s ease-in-out;
+  }
+  
+  #connect .connect-container ul li:last-child{
+    margin-right: 10px;
+  }
+  
+  #connect .connect-container ul li:hover{
+    transform: scale(1.5) rotate(-15deg);
+  }
+
+  #connect .connect-container ul:hover{
+    transform: scale(1.5) ;
+  }
+  
+  #connect .connect-container ul li a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  /*Contact Section*/
+  
+#contact .contact-container .title{
+    text-align: center;
+    padding: 20px 100px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+}
+
+
+#contact .contact-container .line{
+    align-self: center;
+    border-bottom: 2px solid black;
+    display: block;
+}
+
+#contact .contact-container{
+    align-items: center;
+}
+
+#contact .contact-container .columns{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact .contact-container .column-left{
+    width: 60%;
+    justify-content: space-between;
+}
+
+#contact .contact-container .contact-text{
+    text-align: justify;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 20px;
+}
+
+#contact .contact-container .contact-text .row{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#contact .contact-container .contact-text .row .info{
+    margin-left: 30px;
+}
+
+#contact .contact-container .contact-text .icons{
+    margin: 10px 0px;
+}
+
+#contact .contact-container .contact-text .row i{
+    font-size: 25px;
+    color: crimson;
+}
+
+#contact .contact-container .contact-text .row .info .head{
+    font-weight: 500;
+}
+
+#contact .contact-container .contact-text .row .info .subtitle{
+    color: rgb(39, 40, 41);
+}
+
+#contact .contact-container .column-right{
+   width: 40%;
+   padding-left: 50px;
+}
+
+#contact .contact-container .column-right .field .field-name{
+    padding: 5px 0px;
+}
+
+#contact .contact-container .column-right .field .field-email{
+    padding: 5px 0px;
+}
+
+#contact .contact-container .column-right .field .field-textarea{
+    padding: 5px 0px;
+}
+
+#contact .contact-container .column-right .right-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer{
+    text-align: center;
+    background-color: #111;
+    padding: 20px 100px;
+    color: white;
+}
+
+/*responsive media query*/
+@media (max-width: 700px) {
+    .max-width{
+        padding: 0 50px;
+    }
+/*    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .navbar .menu li {
+        display: block;
+        margin: 50px
+    }
+    .navbar.menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 40px;
+    }
+}
+*/
+#project .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px){
+  #project .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
