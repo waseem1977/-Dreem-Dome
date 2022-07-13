@@ -89,7 +89,6 @@ html{
 
 #home{
     display: flex;
-    background: url("https://mail.google.com/mail/u/0?ui=2&ik=0c11c5aa52&attid=0.11&permmsgid=msg-f:1736446544661803609&th=181918eeaa057259&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_DnbWbT5Z6DsA1yh3jkPp33xBdnoyndyytUxSoUQCqMjvU0rK4OETdaV7TlGDrKkQrLUylMlyqOVSLTaWR76B2clJQZIUzf37_7eZMxixki7P0r6HUzyS-94I&disp=emb&realattid=181918e690fec2414ae9") no-repeat center;
     padding: 10px;
     height: 100vh;
     margin: 0;
@@ -255,8 +254,7 @@ img{
   }
 
   #connect {
-    background: url("https://mail.google.com/mail/u/0?ui=2&ik=0c11c5aa52&attid=0.8&permmsgid=msg-f:1736446544661803609&th=181918eeaa057259&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8D1riN4E5hqWpfiSym32fAwRS2394z5hb7K5Dvc6fpV0wEyswYlTGJzEM940kv12JnjdF7bzxRBe4i5ZZiAyM8VnHA_zVL9Z9KV9Bj2z_cHD2jhjME8e7WdgE&disp=emb&realattid=181918e690f726a98843") no-repeat center;
-    color: #fff;
+     color: #fff;
     display: flex;
     min-height: 70vh;
     align-items: center;
@@ -303,7 +301,7 @@ img{
   
   #connect .connect-container ul li a{
     text-decoration: none;
-    color: #ffffff;
+    color: #03a856;
   }
 
   /*Contact Section*/
